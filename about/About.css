@@ -141,42 +141,108 @@ h2, h3, h5, h6 {
     background-color: #0056b3;
 }
 
-footer {
-    background-color: #222;
+
+
+.footer {
+    background-color: #3b3736;
     color: #fff;
-    padding: 40px 20px;
+    padding: 30px 0;
+    font-family: 'Poppins', sans-serif;
 }
 
-.footer-content {
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer-top {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
-    padding-left: 5%
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
-.footer-section {
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     flex: 1;
-    margin: 20px;
 }
 
-.footer-section h4 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+.footer-logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 
-.footer-section a {
-    display: block;
-    margin-bottom: 8px;
+.footer-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    flex: 2;
+    justify-content: center;
+}
+
+.footer-links a {
     color: #f39c12;
     text-decoration: none;
+    font-weight: 500;
     transition: color 0.3s;
 }
 
-.footer-section a:hover {
-    color: #fff;
+.footer-links a:hover {
+    color: #f1c40f;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 0 5px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
 }
 
 .footer-bottom {
-    text-align: center;
-    margin-top: 20px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo,
+    .footer-links,
+    .social-icons {
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
 }
